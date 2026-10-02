@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>MithraVintha - Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body { 
+            font-family: 'Times New Roman', Times, serif; 
+            background: linear-gradient(135deg, #e0f2fe 0%, #fae8ff 100%); 
+            margin: 0; 
+            padding: 20px; 
+            color: #333;
+            overflow-x: hidden;
+        }
+
+                .profile-container {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        img { 
+            border-radius: 50%; 
+            border: 4px solid violet; 
+            box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 12px 35px rgba(255, 165, 0, 0.5);
+        }
+
+        h1 { 
+            color: #6d28d9;; 
+            margin: 15px 0 5px 0;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #0284c7;;
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        
+        marquee {
+            background: orange;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 6px;
+            margin: 10px auto;
+            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.2);
+        }
+
+         margin: 20px 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #d35400;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 0 4px;
+            display: inline-block;
+        }
+
+        .nav-links a:hover {
+            background-color: orange;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+                section { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(10px);
+            margin: 20px auto; 
+            padding: 25px; 
+            border-radius: 12px; 
+            max-width: 700px; 
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06); 
+            text-align: left; 
+            border-left: 5px solid orange;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        section:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 165, 0, 0.15);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        section h2 {
+            color: #d35400;
+            border-bottom: 2px solid #ffe0b2;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+               table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td { 
+            padding: 12px; 
+            text-align: left; 
+        }
+
+        th { 
+            background-color: orange; 
+            color: white; 
+        }
+
+        tr:nth-child(even) {
+            background-color: #fffaf5;
+        }
+
+        tr:hover {
+            background-color: #ffe0b2;
+        }
+
+                .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        .skills-grid li {
+            background: #f3e8ff; 
+    	    color: #7e22ce;
+	    padding :12px;      
+            border: 1px solid #d8b4fe;
+}            text-align: center;
+            font-weight: bold;
+            border: 1px solid #ffe0b2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .skills-grid li:hover {
+            background: orange;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 165, 0, 0.3);
+        }
+
+                .project-card {
+            background: #fffaf5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ffe0b2;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: orange;
+            background: white;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #e67e22;
+        }
+
+                #contact p a {
+            color: #d35400;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        #contact p a:hover {
+            background: orange;
+            color: white;
+        }
+
+                .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <img src="mithra.jpg" alt="Profile" width="150" height="150">
+        <h1>R. MITHRAVINTHA</h1>
+        <div class="subtitle">PHP Full Stack Developer & MCA Student</div>
+        
+        <marquee behavior="scroll" direction="left">
+            Welcome to My Portfolio! | PHP Full Stack Developer & MCA Student
+        </marquee>
+
+        <div class="nav-links">
+            <a href="#about">About</a> 
+            <a href="#education">Education</a> 
+            <a href="#skills">Skills</a> 
+            <a href="#projects">Projects</a> 
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Good Morning Everyone! My self <b>R. MithraVintha</b>, a Computer Science graduate and MCA student interested in PHP Full Stack Development.</p>
+        <p>I enjoy building modern web applications, learning new technologies, and crafting clean, user-friendly digital experiences.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>MCA</td>
+                <td>Sree Saraswathi Thyagaraja College</td>
+                <td>2026 - 2028</td>
+            </tr>
+            <tr>
+                <td>B.Sc Computer Science</td>
+                <td>Arulmigu Palaniandavar Arts College for Women, Oddanchatram</td>
+                <td>Completed</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul class="skills-grid">
+            <li>PHP & MySQL</li>
+            <li>HTML, CSS & JS</li>
+            <li>React & Tailwind</li>
+            <li>Node.js & Express</li>
+            <li>Java & SQL</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="project-card">
+            <h3>1. LifeOS - Habit Tracker</h3>
+            <p>A habit tracking application that helps users track daily habits, streaks and productivity.</p>
+            <p><b>Technologies:</b> React, JavaScript, Local Storage</p>
+        </div>
+
+        <div class="project-card">
+            <h3>2. GadgetZone</h3>
+            <p>An e-commerce application for browsing and purchasing electronic gadgets.</p>
+            <p><b>Technologies:</b> React, Tailwind CSS, Node.js, Express.js, MySQL</p>
+        </div>
+
+        <div class="project-card">
+            <h3>3. Plant Disease Analyzer</h3>
+            <p>An application designed to identify plant diseases using image analysis.</p>
+            <p><b>Technologies:</b> ASP.NET, TensorFlow.js</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p><b>Name:</b> R. MithraVintha</p>
+        <p><b>Email:</b> <a href="mailto:vinthamithra@gmail.com">vinthamithra@gmail.com</a></p>
+        <p><b>Phone:</b> +91 XXXXX XXXXX</p>
+        <p><b>GitHub:</b> <a href="https://github.com/" target="_blank">Visit GitHub</a></p>
+        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/" target="_blank">Visit LinkedIn</a></p>
+    </section>
+
+    <div class="footer">
+        <h3>Thank You for Visiting My Portfolio!</h3>
+        <p>© 2026 MithraVintha R. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
